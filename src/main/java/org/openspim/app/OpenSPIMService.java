@@ -35,10 +35,15 @@ public class OpenSPIMService extends AbstractService {
 
 	@Override
 	public void initialize() {
-		// Configure the update sites if they are not configured yet
 		String imagejDirProperty = System.getProperty("imagej.dir");
 		final File imagejRoot = imagejDirProperty != null ? new File(imagejDirProperty) :
 			AppUtils.getBaseDirectory("ij.dir", FilesCollection.class, "updater");
+
+		// Make sure that the plugins are found
+		System.setProperty("org.micromanager.plugin.path", new File(imagejRoot, "mmplugins").getPath());
+		System.setProperty("org.micromanager.autofocus.path", new File(imagejRoot, "mmautofocus").getPath());
+
+		// Configure the update sites if they are not configured yet
 		if (!imagejRoot.isDirectory() || !new File(imagejRoot, "db.xml.gz").exists()) return;
 		final FilesCollection files = new FilesCollection(log, imagejRoot);
 		try {
