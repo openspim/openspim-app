@@ -14,7 +14,7 @@
 
 	<groupId>org.openspim</groupId>
 	<artifactId>openspim-app</artifactId>
-	<version>0.1.0</version>
+	<version>0.1.1-SNAPSHOT</version>
 
 	<name>OpenSPIM application</name>
 	<description>Having this artifact in the classpath rebrands ImageJ2/Fiji as OpenSPIM application</description>
