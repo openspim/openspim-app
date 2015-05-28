@@ -1,5 +1,6 @@
 package org.openspim.app;
 
+import ij.IJ;
 import ij.io.LogStream;
 
 /**
@@ -14,4 +15,7 @@ class Helper {
 		System.setErr(new LogStream());
 	}
 
+	public static void log(final String msg) {
+		IJ.log( msg );
+	}
 }

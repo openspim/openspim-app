@@ -54,6 +54,7 @@ public class OpenSPIMService extends AbstractService {
 			UpdateSite siteMM = files.getUpdateSite("Micro-Manager-dev", true);
 			final boolean hasMMNightly = siteMM != null && siteMM.isActive() && urlMM.equals(siteMM.getURL());
 			if (!hasMMNightly) {
+				Helper.log("Enabling the Micro-Manager-dev update site because OpenSPIM requires it!");
 				if (siteMM != null) {
 					siteMM.setActive(true);
 					siteMM.setLastModified(-1);
