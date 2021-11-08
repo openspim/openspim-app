@@ -61,7 +61,7 @@
 	</repositories>
 
 	<scm>
-		<connection>scm:git:git://github.com/openspim/openspim-app</connection>
+		<connection>scm:git:https://github.com/openspim/openspim-app</connection>
 		<developerConnection>scm:git:git@github.com:openspim/openspim-app</developerConnection>
 		<tag>HEAD</tag>
 		<url>https://github.com/openspim/openspim-app</url>
